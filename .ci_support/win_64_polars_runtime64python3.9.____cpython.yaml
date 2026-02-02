@@ -1,5 +1,5 @@
 c_compiler:
-- vs2022
+- vs2019
 c_stdlib:
 - vs
 channel_sources:
@@ -7,7 +7,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2022
+- vs2019
 is_abi3:
 - true
 pin_run_as_build:
@@ -15,11 +15,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 polars_runtime:
-- '32'
+- '64'
 python:
-- 3.10.* *_cpython
+- 3.9.* *_cpython
 python_min:
-- '3.10'
+- '3.9'
 rust_compiler:
 - rust
 target_platform:
