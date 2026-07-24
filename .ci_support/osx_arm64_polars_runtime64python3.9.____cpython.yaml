@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '19'
+- '18'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -17,7 +17,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '18'
 is_abi3:
 - true
 macos_machine:
@@ -27,11 +27,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 polars_runtime:
-- compat
+- '64'
 python:
-- 3.10.* *_cpython
+- 3.9.* *_cpython
 python_min:
-- '3.10'
+- '3.9'
 rust_compiler:
 - rust
 target_platform:
