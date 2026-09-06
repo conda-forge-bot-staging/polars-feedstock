@@ -1,23 +1,27 @@
 azure:
-  free_disk_space: true
   max_parallel: 25
-  settings_linux:
-    swapfile_size: 15GiB
-  settings_win:
-    variables:
-      SET_PAGEFILE: 'True'
-      CONDA_BLD_PATH: C:\\bld\\
 bot:
   automerge: true
-build_platform:
-  linux_aarch64: linux_64
-  osx_arm64: osx_64
 conda_build:
   pkg_format: '2'
+conda_build_tool: rattler-build
 conda_forge_output_validation: true
+conda_install_tool: pixi
 github:
   branch_name: main
   tooling_branch_name: main
+provider:
+  linux_aarch64: default
+  osx_arm64: default
 test: native_and_emulated
-conda_build_tool: rattler-build
-conda_install_tool: pixi
+workflow_settings:
+  build_workspace_dir:
+  - os: win
+    provider: azure
+    value: C:\\bld\\
+  free_disk_space: quick
+  pagefile_size:
+  - os: linux
+    value: 15
+  - os: win
+    value: 16
